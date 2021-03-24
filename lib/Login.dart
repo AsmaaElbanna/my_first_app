@@ -2,6 +2,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'DetailsScreen.dart';
+import 'Signup.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 
@@ -43,7 +46,12 @@ class _LoginPageState extends State<LoginPage> {
               child: Text("Sign Up",
                 style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 24),
               ),
-              onPressed: (){}, // navigate to the SignUp Screen and set the Text color black
+              onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  );
+              }, // navigate to the SignUp Screen and set the Text color black
             ),
           ],
         ),
@@ -76,7 +84,12 @@ class _LoginPageState extends State<LoginPage> {
             child: MaterialButton(
               minWidth: MediaQuery.of(context).size.width,
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

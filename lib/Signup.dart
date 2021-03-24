@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'DetailsScreen.dart';
+
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key key}) : super(key: key);
 
@@ -43,7 +45,9 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Text("Sign Up",
                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 35),
               ),
-              onPressed: (){}, // navigate to the SignUp Screen and set the Text color black
+              onPressed: (){
+
+              }, // navigate to the SignUp Screen and set the Text color black
             ),
           ],
         ),
@@ -97,6 +101,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: <Widget>[
             Text("Already have an account? ",
               style: TextStyle(color: Colors.grey, fontSize: 15),
+
             ),
             Text("Login",
               style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
